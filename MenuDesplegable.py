@@ -20,7 +20,7 @@ ventana.mainloop()
 
 
 #TEXTO DE PRUEBA SOY PABLO
-
+#CAMBIOS EN EL MENU PDF Y AGREGUE AL BOTON EDICION TRES OPCIONES
 import tkinter as tk
 
 ventana = tk.Tk()
@@ -40,10 +40,15 @@ menu_archivo.add_command(label='Abrir')
 menu_archivo.add_separator()
 menu_archivo.add_command(label='Guardar')
 menu_archivo.add_command(label='Guardar Como...')
+menu_archivo.add_separator()
+menu_archivo.add_command(label='Convertir a PDF')
 
+menu_edicion = tk.Menu(barra_menu, tearoff=0)
+barra_menu.add_cascade(label='Edición', menu=menu_edicion)
 
-menu_convertir = tk.Menu(barra_menu, tearoff=0)
-barra_menu.add_cascade(label='Convertir a PDF', menu=menu_convertir)
+menu_edicion.add_command(label = 'Copiar')
+menu_edicion.add_command(label = 'Cortar')
+menu_edicion.add_command(label = 'Pegar')
 
 
 menu_acerca = tk.Menu(barra_menu, tearoff=0)
