@@ -9,5 +9,5 @@ app = tk.Tk()
 
 app.configure(width=800, height=500, bg='white')
 app.title('Registro Escolar')
-
+MD.MenuD(app)
 app.mainloop()
